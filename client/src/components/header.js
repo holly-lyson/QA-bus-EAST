@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import logo from '../logo.png';
 import logo2 from '../surfLogo.png';
 import './header.css';
-import './menubar';
+// import './menubar';
 import MenuBar from './menubar';
 import './menubar.css';
+
 
 class Header extends Component {
   render() {

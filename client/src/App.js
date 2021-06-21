@@ -4,7 +4,7 @@ import './App.css';
 import Customers from './components/customers';
 import Header from './components/header';
 import MenuBar from './components/menubar';
-
+import Testimonials from './components/testimonials';
 
 
 class App extends Component{
@@ -14,6 +14,11 @@ class App extends Component{
         <Header />
 
       <Customers/>
+      
+
+      <div>
+      <Testimonials/>
+      </div>
     </div>
     );
   }
