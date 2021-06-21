@@ -4,7 +4,7 @@ import logo from '../logo.png';
 //import { FaBars, FaTimes } from 'react-icons/fa';
 import './menubar.css'
 import { MenuItems } from "./MenuItems"
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+//import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class MenuBar extends Component {
     state = { clicked: false }

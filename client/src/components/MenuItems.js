@@ -8,27 +8,27 @@ export const MenuItems = [
     },
     {
         title: 'About Me',
-        url: '/pages/aboutme', //link goes here
+        url: '/about', //link goes here
         cName: 'menu-links'
     }, 
     {
         title: 'FAQ',
-        url: '/pages/faq', //link goes here
+        url: '/faq', //link goes here
         cName: 'menu-links'
     },
     {
         title: 'Testimonials',
-        url: '/pages/testimonials', //link goes here
+        url: '/testimonials', //link goes here
         cName: 'menu-links'
     },
     {
         title: 'Referrals',
-        url: '/pages/referrals', //link goes here
+        url: '/referrals', //link goes here
         cName: 'menu-links'
     }, 
     {
         title: 'Contact Us',
-        url: '/pages/contactus', //link goes here
+        url: '/contact', //link goes here
         cName: 'menu-links'
     }  
 ]
