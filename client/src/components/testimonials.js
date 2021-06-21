@@ -25,11 +25,11 @@ class Testimonials extends Component {
                     <img src={img1} alt="img1"/>
                     <p className="legend">Legend 1</p>
                 </div>
-                {imgs2.forEach(e => {
+                {/* {imgs2.forEach(e => {
                     <div>
                         <image src={e}/>
-                    </div>
-                })}
+                    </div> */}
+                {/* })} */}
                 
             </Carousel>
         </div>
