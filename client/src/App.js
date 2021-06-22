@@ -30,12 +30,6 @@ class App extends Component{
           </Switch>
       </Router>
 
-      {/* <Customers/> */}
-      
-      <div>
-      {/* <Contact/> */}
-      {/* <Testimonials/> */}
-      </div>
     </div>
     );
   }
