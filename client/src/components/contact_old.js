@@ -21,30 +21,54 @@ class Contact extends Component {
       }
   render() {
     return(
-      <div class="container">
-          
-          <div class="row">
-            <div class="column">
+      <Container fluid="md">
+        <Row>
+            <h2>Contact Us</h2>
+        </Row>
+        <Row xs="auto">
+            <Col>
               <div class="contacts">
-                  <p>Call us:</p>
-                  <span class="fa fa-phone "> </span>  609-742-1457 <br/>  
-                  <br/>       
+                <span class="fa fa-phone "></span>  001 1023 567  
+                <br/>
+                <span class="fa fa-envelope "></span> contact@company.com         
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm>Hello            </Col>
+            <Col sm>Hello            </Col>
+        </Row>
+        
+        <div class="row input-container">
+            <div class="col-xs-6">
+              <div class="styled-input wide">
+                <input type="text" required />
+                <label>Name</label> 
               </div>
             </div>
-            <div class="column">
-              <form action="/action_page.php">
-                <span class="fa fa-envelope "> Send us an eMail  </span> <br/><br/>
-                <label for="fname">Name</label>
-                <input type="text" required id="name" name="name" placeholder="Your name..."/>
-                <label for="lname">Email</label>
-                <input type="email" id="lname" name="lastname" placeholder="Your email address..."/>
-                <label for="subject">Message</label>
-                <textarea id="subject" name="subject" placeholder="Write your message here..." ></textarea>
-                <input type="submit" value="Submit"/>
-              </form>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input left">
+                <input type="text" required />
+                <label>Email</label> 
+              </div>
             </div>
-          </div>
-      </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input right"> 
+                <input type="text" required />
+                <label>Phone Number</label> 
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="styled-input wide">
+                <textarea required></textarea>
+                <label>Message</label>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="btn-lrg submit-btn">Send Message</div>
+            </div>
+        </div>
+      </Container>
       
         /*<div className="blk-background">
         <div className="App">
