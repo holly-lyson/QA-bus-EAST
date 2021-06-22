@@ -1,5 +1,5 @@
 .MenubarItems {
-    background: #048ac0;
+    background-image: linear-gradient(#048ac0, #191846);
     height: 80px;
     display: flex;
     justify-content: center;

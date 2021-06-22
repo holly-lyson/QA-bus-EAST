@@ -10,16 +10,21 @@ import Faq from './components/faq';
 import About from './components/about';
 import Referrals from './components/referrals';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Header from './components/header';
 
 
 class App extends Component{
   render(){
+
     return(
       <div className="App">
-      {/*  <Header /> */}
+        <div>
+          <MenuBar/>
+        </div>
+        <div>
+
       <Router>
-          <MenuBar />
-          
+         
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about"  component={About} /> 
@@ -30,7 +35,10 @@ class App extends Component{
           </Switch>
       </Router>
 
+      </div>
+
     </div>
+
     );
   }
 }

@@ -14,9 +14,9 @@ class Header extends Component {
         <div className="App">
         <header className="App-header">
           {/* <img style={{marginBottom: "30pt"}} src={logo} className="App-logo" alt="logo"/> */}
-          <h1 style={{marginTop: "40pt", marginBottom: "-40pt", paddingBottom: "5pt", float: "left" }} className='App-title'>Jeremy Lyson</h1>
-          <h6 className='App-Subtitle'> of</h6>
-          <img style={{paddingBottom: "20pt", marginBottom: "-40pt", marginTop: "-70pt", paddingTop: "5pt"}}src={logo2} className="App-logo2" alt="logo2" width="150px" height="auto" />
+          <h1 style={{marginTop: "20pt", marginBottom: "-0pt"}} className='App-title'>Jeremy Lyson</h1>
+          <h6 style={{marginTop: "10pt", marginBottom: "-20pt"}} className='App-Subtitle'> of</h6>
+          <img style={{marginBottom: "0pt", marginTop: "0pt"}}src={logo2} className="App-logo2" alt="logo2" width="150px" height="auto" />
           {/*<MenuBar/>*/}
         </header>
         </div>

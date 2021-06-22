@@ -23,7 +23,7 @@ class Testimonials extends Component {
                 {/* {imgs} */}
                     
                     <img src={img1} alt="img1"/>
-                    <p className="legend">Legend 1</p>
+                    <p className="legend">1</p>
                 </div>
                 {/* {imgs2.forEach(e => {
                     <div>

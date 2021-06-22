@@ -15,7 +15,7 @@ class MenuBar extends Component {
 
     render() {
         return(
-            <nav className="MenubarItems">
+            <nav className="MenubarItems" >
                 {/*<div className="manubar-container">
                     <img src={logo} className="manubar-logo" alt="logo"/>
                 </div>*/}
