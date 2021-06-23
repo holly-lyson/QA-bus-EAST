@@ -1,0 +1,14 @@
+.form-container {
+    color: white;
+    border-style: outset;
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.form-inputs {
+    width: 90%;
+    position: relative;
+    margin: auto;
+}
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios, {AxiosInstance} from 'axios';
 import ReactDOM from 'react-dom';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import {Carousel} from 'react-responsive-carousel';
@@ -35,9 +36,25 @@ class Testimonials extends Component {
 
     return(
         <div className="blk-background">
-        <div className="App">
-        <div>
-            </div>
+            <div className="App">
+                <div>
+                    <div className="form-container">
+                        <h1> Testimonial form </h1>
+                        <div className="form-inputs">
+                            <label className="form-label">Name</label>
+                            <input type="text" name="name" className="form-input" placeholder="Your Name..." />
+                        </div>
+                        <div className="form-inputs">
+                            <label className="form-label">email</label>
+                            <input type="email" name="email" className="form-input" placeholder="Your email..." />
+                        </div>
+                        <div className="form-inputs">
+                            <label className="form-label">Testimonial</label>
+                            <textarea rows="5" rows="3" name="testimonial" className="form-input" placeholder="Your testimonial text..."></textarea>
+                        </div>
+                        <input type="submit" value="Submit" />
+                    </div>
+                </div>
             <Carousel autoPlay={true} infiniteLoop={true} showArrows={true} >
                 <div>
                     {
@@ -52,7 +69,7 @@ class Testimonials extends Component {
                 </div>
 
             </Carousel>
-        </div>
+            </div>
         </div>
 
     );

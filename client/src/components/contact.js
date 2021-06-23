@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import {Container, Row, Col} from 'react-bootstrap'//
-import logo from '../logo.png';
-import logo2 from '../surfLogo.png';
-import './header.css';
-// import './menubar';
-import MenuBar from './menubar';
-import './menubar.css';
 import axios, {AxiosInstance} from 'axios';
 import './contact.css';
 
@@ -22,24 +15,24 @@ class Contact extends Component {
 
   render() {
     return(
-      <div class="container">
+      <div className="container">
           
-          <div class="row">
-            <div class="column">
-              <div class="contacts">
+          <div className="row">
+            <div className="column">
+              <div className="contacts">
                   <p>Call Jeremy:</p>
-                  <span class="fa fa-phone "> </span>  609-742-1457 <br/>  
+                  <span className="fa fa-phone "> </span>  609-742-1457 <br/>  
                   <br/>       
               </div>
             </div>
-            <div class="column">
+            <div className="column">
+              <span className="fa fa-envelope "> Send an Email  </span>
               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
-                <span class="fa fa-envelope "> Send an Email  </span> <br/><br/>
-                <label for="fname">Name</label>
+                <label for="name"><br/><br/>Name</label>
                 <input type="text" required id="name" name="name" placeholder="Your name..."
                   value={this.state.name} onChange={this.onNameChange.bind(this)}
                 />
-                <label for="lname">Email</label>
+                <label for="email">Email</label>
                 <input type="email" id="lname" name="lastname" placeholder="Your email address..."
                   aria-describedby="emailHelp" 
                   value={this.state.email} onChange={this.onEmailChange.bind(this)}
@@ -53,29 +46,29 @@ class Contact extends Component {
           </div>
       </div>
       
-        /*<div className="blk-background">
-        <div className="App">
+        /*<div classNameName="blk-background">
+        <div classNameName="App">
             <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-              <div className="form-group">
+              <div classNameName="form-group">
                   <label htmlFor="name">Name</label>
-                  <input type="text" className="form-control" />
-                  <input type="text" className="form-control" id="name" value={this.state.name} 
+                  <input type="text" classNameName="form-control" />
+                  <input type="text" classNameName="form-control" id="name" value={this.state.name} 
                   onChange={this.onNameChange.bind(this)} />
               </div>
-              <div className="form-group">
+              <div classNameName="form-group">
                   <label htmlFor="exampleInputEmail1">Email address</label>
-                  <input type="email" className="form-control" aria-describedby="emailHelp" />
-                  <input type="email" className="form-control" id="email" 
+                  <input type="email" classNameName="form-control" aria-describedby="emailHelp" />
+                  <input type="email" classNameName="form-control" id="email" 
                   aria-describedby="emailHelp" 
                   value={this.state.email} onChange={this.onEmailChange.bind(this)} />
               </div>
-              <div className="form-group">
+              <div classNameName="form-group">
                   <label htmlFor="message">Message</label>
-                  <textarea className="form-control" rows="5"></textarea>
-                  <textarea className="form-control" rows="5" id="message" 
+                  <textarea classNameName="form-control" rows="5"></textarea>
+                  <textarea classNameName="form-control" rows="5" id="message" 
                   value={this.state.message} onChange={this.onMessageChange.bind(this)} />
               </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button type="submit" classNameName="btn btn-primary">Submit</button>
             </form>
         </div>
 

@@ -5,28 +5,28 @@ class Footer extends Component {
 	render() {
 		return(
 			<div style={{paddingTop: "50pt"}}>
-				{/* <div class="container"></div> */}
+				{/* <div className="container"></div> */}
 				<footer>
 				{/* <!-- Footer main --> */}
-				<section class="ft-main">
-					<div class="ft-main-item">
-					<h2 class="ft-title"><a href="/about">About</a></h2>
-					<ul class="ft-about-col">
+				<section className="ft-main">
+					<div className="ft-main-item">
+					<h2 className="ft-title"><a href="/about">About</a></h2>
+					<ul className="ft-about-col">
 						<li><a href="/faq">FAQ</a></li>
 						<li><a href="/testimonials">Testimonials</a></li>
 						<li><a href="/referrals">Referrals</a></li>
 					</ul>
 					</div>
-					<div class="ft-main-item">
-					<h2 class="ft-title"><a>Service Area</a></h2>
+					<div className="ft-main-item">
+					<h2 className="ft-title"><a>Service Area</a></h2>
 					<ul>
 						<li><a>Central Jersey</a></li>
 						<li><a>South Jersey</a></li>
 						<li><a>Philadelphia</a></li>
 					</ul>
 					</div>
-					<div class="ft-main-item">
-					<h2 class="ft-title"><a href="/contact">Contact</a></h2>
+					<div className="ft-main-item">
+					<h2 className="ft-title"><a href="/contact">Contact</a></h2>
 					<ul>
 						<li><a>Jeremy Lyson</a></li>
 						<li><a>609-742-1457</a></li>
@@ -37,20 +37,20 @@ class Footer extends Component {
 				</section>
 				
 				{/* <!-- Footer social --> */}
-				<section class="ft-social">
-					<ul class="ft-social-list">
-					<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fab fa-github"></i></a></li>
-					<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+				<section className="ft-social">
+					<ul className="ft-social-list">
+					<li><a href="#"><i className="fab fa-facebook"></i></a></li>
+					<li><a href="#"><i className="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i className="fab fa-instagram"></i></a></li>
+					<li><a href="#"><i className="fab fa-github"></i></a></li>
+					<li><a href="#"><i className="fab fa-linkedin"></i></a></li>
+					<li><a href="#"><i className="fab fa-youtube"></i></a></li>
 					</ul>
 				</section>
 				
 				{/* <!-- Footer legal --> */}
-				<section class="ft-legal">
-					<ul class="ft-legal-list">
+				<section className="ft-legal">
+					<ul className="ft-legal-list">
 					<li><a href="#">Terms &amp; Conditions</a></li>
 					<li><a href="#">Privacy Policy</a></li>
 					<li>&copy; 2019 Copyright Nowrap Inc.</li>

@@ -1,0 +1,32 @@
+.introduction {
+    width: fit-content;
+    padding: 20px;
+    border-style: outset;
+    position: relative;
+    margin: auto;
+
+}
+
+.intro-title {
+    color:#048ac0;
+    font-size: 50px;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+.money {
+    font-size: 100px;
+    color:#e92b0c;
+}
+
+.form-container {
+    padding: 20px;
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.form-inputs {
+    width: 90%;
+    position: relative;
+    margin: auto;
+}
