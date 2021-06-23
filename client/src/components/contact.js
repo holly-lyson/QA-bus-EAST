@@ -35,11 +35,17 @@ class Contact extends Component {
               <form action="/action_page.php">
                 <span class="fa fa-envelope "> Send us an eMail  </span> <br/><br/>
                 <label for="fname">Name</label>
-                <input type="text" required id="name" name="name" placeholder="Your name..."/>
+                <input type="text" required id="name" name="name" placeholder="Your name..."
+                  value={this.state.name} onChange={this.onNameChange.bind(this)}
+                />
                 <label for="lname">Email</label>
-                <input type="email" id="lname" name="lastname" placeholder="Your email address..."/>
-                <label for="subject">Message</label>
-                <textarea id="subject" name="subject" placeholder="Write your message here..." ></textarea>
+                <input type="email" id="lname" name="lastname" placeholder="Your email address..."
+                  aria-describedby="emailHelp" 
+                  value={this.state.email} onChange={this.onEmailChange.bind(this)}
+                />
+                <label for="message">Message</label>
+                <textarea rows="5" id="message" name="subject" placeholder="Write your message here..." 
+                  value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
                 <input type="submit" value="Submit"/>
               </form>
             </div>
@@ -52,14 +58,21 @@ class Contact extends Component {
               <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input type="text" className="form-control" />
+                  <input type="text" className="form-control" id="name" value={this.state.name} 
+                  onChange={this.onNameChange.bind(this)} />
               </div>
               <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Email address</label>
                   <input type="email" className="form-control" aria-describedby="emailHelp" />
+                  <input type="email" className="form-control" id="email" 
+                  aria-describedby="emailHelp" 
+                  value={this.state.email} onChange={this.onEmailChange.bind(this)} />
               </div>
               <div className="form-group">
                   <label htmlFor="message">Message</label>
                   <textarea className="form-control" rows="5"></textarea>
+                  <textarea className="form-control" rows="5" id="message" 
+                  value={this.state.message} onChange={this.onMessageChange.bind(this)} />
               </div>
               <button type="submit" className="btn btn-primary">Submit</button>
             </form>
