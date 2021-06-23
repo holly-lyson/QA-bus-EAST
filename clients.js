@@ -55,7 +55,9 @@ const clients = [
         city: 'Mays Landing',
         state: 'NJ',
         // photoURL: require("./client/public/images/1.png")
-        photoURL: "./images/1.png"
+        photoURL: "./images/1.png",
+        testimonial: "Jeremy was a true professional, we are extremely satisfied."
+
     }, 
     {
         id: 2,
@@ -64,7 +66,8 @@ const clients = [
         address: '33 Wilson Avenue',
         city: 'Somers Point',
         state: 'NJ',
-        photoURL: "./images/2.png"
+        photoURL: "./images/2.png",
+        testimonial: "Best roofer in the business!"
     }, 
     {
         id: 3,
@@ -73,7 +76,8 @@ const clients = [
         address: '14 Cliveden Avenue',
         city: 'Somers Point',
         state: 'NJ',
-        photoURL: "./images/3.png"
+        photoURL: "./images/3.png",
+        testimonial: ""
     }, 
     {
         id: 4,
@@ -101,6 +105,7 @@ const clients = [
         city: 'Egg Harbor Township',
         state: 'NJ',
         photoURL: "./images/6.png"
+        
     }, 
     {
         id: 7,
