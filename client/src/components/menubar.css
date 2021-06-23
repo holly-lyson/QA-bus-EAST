@@ -1,20 +1,12 @@
 .MenubarItems {
     background: #191846;
-    height: 80px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
 }
 
-.menubar-logo {
-    size: 10px;
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    font-size: 20px;
-    cursor: pointer;
-}
 
 .logo {
     size: 20px;
