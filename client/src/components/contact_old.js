@@ -6,8 +6,8 @@ import './header.css';
 // import './menubar';
 import MenuBar from './menubar';
 import './menubar.css';
-import axios, {AxiosInstance} from 'axios';
 import './contact.css';
+import axios from 'axios';
 
 
 class Contact extends Component {
@@ -19,39 +19,56 @@ class Contact extends Component {
           message: ''
         }
       }
-
   render() {
     return(
-      <div class="container">
-          
-          <div class="row">
-            <div class="column">
+      <Container fluid="md">
+        <Row>
+            <h2>Contact Us</h2>
+        </Row>
+        <Row xs="auto">
+            <Col>
               <div class="contacts">
-                  <p>Call us:</p>
-                  <span class="fa fa-phone "> </span>  609-742-1457 <br/>  
-                  <br/>       
+                <span class="fa fa-phone "></span>  001 1023 567  
+                <br/>
+                <span class="fa fa-envelope "></span> contact@company.com         
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm>Hello            </Col>
+            <Col sm>Hello            </Col>
+        </Row>
+        
+        <div class="row input-container">
+            <div class="col-xs-6">
+              <div class="styled-input wide">
+                <input type="text" required />
+                <label>Name</label> 
               </div>
             </div>
-            <div class="column">
-              <form action="/action_page.php">
-                <span class="fa fa-envelope "> Send us an eMail  </span> <br/><br/>
-                <label for="fname">Name</label>
-                <input type="text" required id="name" name="name" placeholder="Your name..."
-                  value={this.state.name} onChange={this.onNameChange.bind(this)}
-                />
-                <label for="lname">Email</label>
-                <input type="email" id="lname" name="lastname" placeholder="Your email address..."
-                  aria-describedby="emailHelp" 
-                  value={this.state.email} onChange={this.onEmailChange.bind(this)}
-                />
-                <label for="message">Message</label>
-                <textarea rows="5" id="message" name="subject" placeholder="Write your message here..." 
-                  value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
-                <input type="submit" value="Submit"/>
-              </form>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input left">
+                <input type="text" required />
+                <label>Email</label> 
+              </div>
             </div>
-          </div>
-      </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input right"> 
+                <input type="text" required />
+                <label>Phone Number</label> 
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="styled-input wide">
+                <textarea required></textarea>
+                <label>Message</label>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="btn-lrg submit-btn">Send Message</div>
+            </div>
+        </div>
+      </Container>
       
         /*<div className="blk-background">
         <div className="App">
@@ -59,30 +76,22 @@ class Contact extends Component {
               <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input type="text" className="form-control" />
-                  <input type="text" className="form-control" id="name" value={this.state.name} 
-                  onChange={this.onNameChange.bind(this)} />
               </div>
               <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Email address</label>
                   <input type="email" className="form-control" aria-describedby="emailHelp" />
-                  <input type="email" className="form-control" id="email" 
-                  aria-describedby="emailHelp" 
-                  value={this.state.email} onChange={this.onEmailChange.bind(this)} />
               </div>
               <div className="form-group">
                   <label htmlFor="message">Message</label>
                   <textarea className="form-control" rows="5"></textarea>
-                  <textarea className="form-control" rows="5" id="message" 
-                  value={this.state.message} onChange={this.onMessageChange.bind(this)} />
               </div>
               <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
-
-        </div>
-
     </div>*/
-
+        // <div>
+        //     <h4>Small header</h4>
+        // </div>
     );
   }
 
@@ -90,17 +99,13 @@ class Contact extends Component {
     e.preventDefault();
     axios({
       method: "POST",
-      headers: { 'Access-Control-Allow-Origin' : "*",
-                  'Content-Type': 'application/json'},
-      url:"http://66.228.35.168:4000/api/send",
+      url:"http://localhost:3002/send",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {
-        console.log("Success: ", response.data);
         alert("Message Sent.");
         this.resetForm()
       } else if (response.data.status === 'fail') {
-        console.log("Success: ", response.data);
         alert("Message failed to send.")
       }
     })

@@ -39,7 +39,13 @@ class Testimonials extends Component {
     return(
         <div className="blk-background">
         <div className="App">
+<<<<<<< HEAD
         <div>
+=======
+        
+            <div>
+            {/* {clients.map(({id, lastName, photoURL}) => <img key={id} alt={lastName} src={photoURL}/>)} */}
+>>>>>>> branch_Petro
             </div>
             <Carousel autoPlay={true} infiniteLoop={true} showArrows={true} >
                 <div>
