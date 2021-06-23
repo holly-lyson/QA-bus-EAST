@@ -30,7 +30,7 @@ class Footer extends Component {
 					<ul>
 						<li><a>Jeremy Lyson</a></li>
 						<li><a>609-742-1457</a></li>
-						<li><a>JeremyLyson@email</a></li>
+						<li><a>jeremylyson@surfandturfroofing.com</a></li>
 					</ul>
 					</div>
 					
