@@ -5,7 +5,7 @@ import './header.css';
 // import './menubar';
 import MenuBar from './menubar';
 import './menubar.css';
-import axios from 'axios';
+import axios, {AxiosInstance} from 'axios';
 
 
 class Contact extends Component {
@@ -17,6 +17,7 @@ class Contact extends Component {
           message: ''
         }
       }
+
   render() {
     return(
         <div className="blk-background">
@@ -38,9 +39,7 @@ class Contact extends Component {
             </form>
         </div>
         </div>
-        // <div>
-        //     <h4>Small header</h4>
-        // </div>
+
     );
   }
 
@@ -48,13 +47,17 @@ class Contact extends Component {
     e.preventDefault();
     axios({
       method: "POST",
-      url:"http://localhost:3002/send",
+      headers: { 'Access-Control-Allow-Origin' : "*",
+                  'Content-Type': 'application/json'},
+      url:"http://66.228.35.168:4000/api/send",
       data:  this.state
     }).then((response)=>{
       if (response.data.status === 'success') {
+        console.log("Success: ", response.data);
         alert("Message Sent.");
         this.resetForm()
       } else if (response.data.status === 'fail') {
+        console.log("Success: ", response.data);
         alert("Message failed to send.")
       }
     })

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/holly-lyson/QA-bus-EAST#readme",
   "dependencies": {
     "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
     "create-react-app": "^4.0.3",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
