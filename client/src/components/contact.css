@@ -9,7 +9,7 @@ body {
 
   .contacts {
     position: right;
-    background:linear-gradient(#048ac0, #191846);
+    background: #048ac0;
     color:#fff;
     width:400px;
     padding:25px 40px 40px 40px;

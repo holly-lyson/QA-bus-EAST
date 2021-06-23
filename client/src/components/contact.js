@@ -27,14 +27,14 @@ class Contact extends Component {
           <div class="row">
             <div class="column">
               <div class="contacts">
-                  <p>Call us:</p>
+                  <p>Call Jeremy:</p>
                   <span class="fa fa-phone "> </span>  609-742-1457 <br/>  
                   <br/>       
               </div>
             </div>
             <div class="column">
-              <form action="/action_page.php">
-                <span class="fa fa-envelope "> Send us an eMail  </span> <br/><br/>
+              <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
+                <span class="fa fa-envelope "> Send an Email  </span> <br/><br/>
                 <label for="fname">Name</label>
                 <input type="text" required id="name" name="name" placeholder="Your name..."
                   value={this.state.name} onChange={this.onNameChange.bind(this)}

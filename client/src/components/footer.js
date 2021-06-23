@@ -4,8 +4,8 @@ import './footer.css'
 class Footer extends Component {
 	render() {
 		return(
-			<body>
-				<div class="container"></div>
+			<div style={{paddingTop: "50pt"}}>
+				{/* <div class="container"></div> */}
 				<footer>
 				{/* <!-- Footer main --> */}
 				<section class="ft-main">
@@ -57,7 +57,7 @@ class Footer extends Component {
 					</ul>
 				</section>
 				</footer>
-			</body>
+			</div>
 
 		)
 	}

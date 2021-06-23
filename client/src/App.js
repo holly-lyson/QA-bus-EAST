@@ -12,6 +12,7 @@ import Referrals from './components/referrals';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/header';
 import Roof from './roof.png'
+import Footer from './components/footer';
 
 class App extends Component{
 
@@ -20,10 +21,10 @@ class App extends Component{
   toRender(){
     if (document.location.pathname === "/"){
     return(
-        <div className="Home">
+        <div className>
         <Header />
         {/* <MenuBar/> */}
-        <img style={{border: '2px solid black', marginBottom: "5pt", marginTop: "20pt"}}src={Roof} className="Roof" alt="Roof" width="700px" height="auto" />
+        <img style={{border: '2px solid black',  paddingBottom: "50pt", marginTop: "20pt"}}src={Roof} className="Roof" alt="Roof" width="700px" height="auto" />
         <h1>Services we offer</h1>
         <h6> Repairs and Full Replacements!</h6>
           <p>&bull; Shingle Roofing </p>
@@ -32,14 +33,18 @@ class App extends Component{
           <p>&bull; Gutters </p>
           <p>&bull; Tile Roofing </p>
         <h3> Financing Available! </h3>
+
+          <Footer/>
+
         </div>
+
       );
     } else {
       return(          
-      <div className="Home">
+      <div>
         {/* <MenuBar /> */}
         {/* <Header/> */}
-        <img style={{border: '2px solid black', marginBottom: "5pt", marginTop: "20pt"}}src={Roof} className="Roof" alt="Roof" width="700px" height="auto" />
+        <img style={{border: '2px solid black',  paddingBottom: "50pt", marginTop: "20pt"}}src={Roof} className="Roof" alt="Roof" width="700px" height="auto" />
         <h1>Services we offer</h1>
         <h6> Repairs and Full Replacements!</h6>
           <p>&bull; Shingle Roofing </p>
@@ -48,6 +53,9 @@ class App extends Component{
           <p>&bull; Gutters </p>
           <p>&bull; Tile Roofing </p>
         <h3> Financing Available! </h3>
+
+          <Footer/>
+
         </div>
       );
     }
@@ -56,7 +64,7 @@ class App extends Component{
 
     return(
       <div className="App">
-        <div className="Home" style={{marginTop: "0pt"}}>
+        <div style={{marginTop: "0pt"}}>
           {/* {this.toRender()} */}
           
         </div>
@@ -64,7 +72,6 @@ class App extends Component{
           <MenuBar/>
         {/* </div> */}
         <div>
-      <div>
       <Router>
          
           <Switch>
@@ -77,7 +84,7 @@ class App extends Component{
           </Switch>
       </Router>
       </div>
-      </div>
+      <Footer/>
 
     </div>
 

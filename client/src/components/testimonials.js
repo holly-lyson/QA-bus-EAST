@@ -7,8 +7,6 @@ import logo2 from '../surfLogo.png';
 import img1 from "../images/1.png"
 // import clients from "./clients"
 import './testimonials.css';
-import axios, {AxiosInstance} from 'axios';
-
 
 class Testimonials extends Component {
 
@@ -22,10 +20,9 @@ class Testimonials extends Component {
 
     componentDidMount(){
            // #1. First of all you have to fetch the images.
-    // fetch('/api/clients')
-    //     .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
-    //     .then(images => this.setState({ images }, () => console.log("Customers fetched: ", images))) // #2. After that you have to keep the images in the component's state.
-        this.handleSubmit();
+    fetch('/api/clients')
+        .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
+        .then(images => this.setState({ images }, () => console.log("Customers fetched: ", images))) // #2. After that you have to keep the images in the component's state.
         
     }
 
@@ -39,13 +36,7 @@ class Testimonials extends Component {
     return(
         <div className="blk-background">
         <div className="App">
-<<<<<<< HEAD
         <div>
-=======
-        
-            <div>
-            {/* {clients.map(({id, lastName, photoURL}) => <img key={id} alt={lastName} src={photoURL}/>)} */}
->>>>>>> branch_Petro
             </div>
             <Carousel autoPlay={true} infiniteLoop={true} showArrows={true} >
                 <div>
@@ -65,22 +56,6 @@ class Testimonials extends Component {
         </div>
 
     );
-  }
-
-  handleSubmit(){
-    // e.preventDefault();
-    axios({
-      method: "POST",
-      url:"http://localhost:4000/api/send",
-      data:  this.state
-    }).then((response)=>{
-      if (response.data.status === 'success') {
-        alert("Message Sent.");
-        this.resetForm()
-      } else if (response.data.status === 'fail') {
-        alert("Message failed to send.")
-      }
-    })
   }
 }
 // ReactDOM.render(<Testimonials />, document.querySelector('.demo-carousel'));

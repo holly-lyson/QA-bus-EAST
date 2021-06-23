@@ -19,7 +19,7 @@ class Home extends Component {
                 <p>&bull; Tile Roofing </p>
               <h3> Financing Available! </h3>
 
-              <Footer />
+              {/* <Footer /> */}
 
           </div>
       );
