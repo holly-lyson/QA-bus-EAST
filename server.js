@@ -31,8 +31,9 @@ app.post('/api/send', (req, res) => {
     var name = req.body.name,
         email = req.body.email,
         message = req.body.message;
-        
+
     console.log("Form handled!")
+    console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n")
 })
 
 app.listen(port, () => console.log("Listening on port: " + port));
