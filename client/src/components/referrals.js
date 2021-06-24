@@ -20,7 +20,7 @@ class Referrals extends Component {
             <div className="introduction">
               <p className="intro-title">Refer and Earn</p>
               <p className="money">$100 cash </p> 
-              <p style={{fontSize:'1.8rem'}}>per referral</p>
+              <p style={{fontSize:'2rem', color: '#048ac0'}}>per referral</p>
               <p>as long as the referred customer has a completed service</p>
             </div>
             <form onSubmit={this.handleSubmit.bind(this)}>
