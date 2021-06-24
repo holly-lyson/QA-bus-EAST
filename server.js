@@ -51,15 +51,14 @@ app.post('/api/send', (req, res) => {
         to: 'zurend55@students.rowan.edu',
         subject: "NODEJS Hot Lead: ",
         // html: '<p>'+ message + '</p>'
-        text: "FROM : " + email + "\n\
-                Message: " + message
+        text: "FROM : " + email + "Message: " + message
     };
 
     transporter.sendMail(mailOptions, (err, info) => {
         if (err){
             console.log(err);
         } else {
-            console.log("Email sent! ");
+            console.log("Email sent!\n");
         }
     })
 })
@@ -74,7 +73,7 @@ app.post('/api/apply', (req, res) => {
         message = req.body.message;
 
     console.log("Form handled!")
-    console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n")
+    console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n------------------------------\n")
 
 })
 
