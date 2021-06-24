@@ -34,7 +34,7 @@ app.post('/api/send', (req, res) => {
 
     res.json(req.body);
 
-    console.log("Form handled!")
+    console.log("\nForm handled!")
     console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n")
 })
 
