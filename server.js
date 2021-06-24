@@ -16,19 +16,18 @@ app.use(Express.urlencoded({ extended: true}))
 app.get('/api/clients', (req, res) => {
     // res.setHeader('Access-Control-Allow-Origin', '*')
     var custs = []
-    var i = 0;
+
     res.json(Clients)
-    i++;
-    console.log("Clients sent " , i, " times!")
+    console.log("Client information sent!")
 
 })
 
 
-app.get('/api/send', (req, res) => {
+app.post('/api/send', (req, res) => {
     // res.setHeader('Access-Control-Allow-Origin', '*');
     var statusCode = res.statusCode;
     // res.send("Status code: " + statusCode)
-
+    console.log("Form handled!")
 })
 
 app.listen(port, () => console.log("Listening on port: " + port));

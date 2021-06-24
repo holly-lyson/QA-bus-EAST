@@ -103,7 +103,7 @@ class Contact extends Component {
     this.setState({name: '', email: '', message: ''})
   }
 
-  onNameChange(event) {
+    onNameChange(event) {
     this.setState({name: event.target.value})
     }
 
