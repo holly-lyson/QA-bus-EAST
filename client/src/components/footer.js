@@ -39,8 +39,8 @@ class Footer extends Component {
 				{/* <!-- Footer social --> */}
 				<section className="ft-social">
 					<ul className="ft-social-list">
-					<li><a href="https://github.com/holly-lyson/QA-bus-EAST" target="_blank"><i className="fab fa-github"></i></a></li>
-					<li><a href="https://linkedin.com/in/hollyzurenda" target="_blank"><i className="fab fa-linkedin"></i></a></li>
+					<li><a target="_blank" href="https://github.com/holly-lyson/QA-bus-EAST" ><i className="fab fa-github"></i></a></li>
+					<li><a target="_blank" href="https://linkedin.com/in/hollyzurenda" target="_blank"><i className="fab fa-linkedin"></i></a></li>
 					</ul>
 				</section>
 				
