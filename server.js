@@ -7,16 +7,13 @@ import nodemailer from 'nodemailer';
 
 const app = Express();
 const port = 4000;
-// const cors = Cors();
 
 
 app.use(Express.json())
 app.use(Express.urlencoded({ extended: true}))
-// app.use(Cors)
-// app.use(cors);
+
 
 app.get('/api/clients', (req, res) => {
-    // res.setHeader('Access-Control-Allow-Origin', '*')
     var custs = []
 
     res.json(Clients)
@@ -26,10 +23,8 @@ app.get('/api/clients', (req, res) => {
 
 
 app.post('/api/send', (req, res) => {
-    // res.setHeader('Access-Control-Allow-Origin', '*');
     var statusCode = res.statusCode;
-    // res.send("Status code: " + statusCode)
-    // res.sendStatus();
+
     var name = req.body.name,
         email = req.body.email,
         message = req.body.message;
@@ -50,7 +45,6 @@ app.post('/api/send', (req, res) => {
         from: email,
         to: 'zurend55@students.rowan.edu',
         subject: "NODEJS Hot Lead: ",
-        // html: '<p>'+ message + '</p>'
         text: "FROM : " + email + "Message: " + message
     };
 
@@ -64,10 +58,8 @@ app.post('/api/send', (req, res) => {
 })
 
 app.post('/api/apply', (req, res) => {
-    // res.setHeader('Access-Control-Allow-Origin', '*');
     var statusCode = res.statusCode;
-    // res.send("Status code: " + statusCode)
-    // res.sendStatus();
+
     var name = req.body.name,
         email = req.body.email,
         message = req.body.message;
@@ -81,10 +73,8 @@ app.post('/api/apply', (req, res) => {
 
 
 app.post('/api/refer', (req, res) => {
-    // res.setHeader('Access-Control-Allow-Origin', '*');
     var statusCode = res.statusCode;
-    // res.send("Status code: " + statusCode)
-    // res.sendStatus();
+
     var name = req.body.name,
         referer = req.body.referer,
         phone = req.body.phone;
