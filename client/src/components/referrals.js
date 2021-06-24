@@ -24,7 +24,7 @@ class Referrals extends Component {
               <p>as long as the referred customer has a completed service</p>
             </div>
             <form onSubmit={this.handleSubmit.bind(this)}>
-            <div >
+            <div className="ref-form">
               {/* <div> */}
               <div className="form-inputs">
                 <div>
