@@ -23,7 +23,7 @@ class Referrals extends Component {
               <p style={{fontSize:'1.8rem'}}>per referral</p>
               <p>as long as the referred customer has a completed service</p>
             </div>
-            <div className="ref-form">
+            {/* <div className="ref-form"> */}
             <form onSubmit={this.handleSubmit.bind(this)}>
               <div className="form-inputs">
             <div>
@@ -43,7 +43,7 @@ class Referrals extends Component {
             </form>
             </div>
           </div>
-        </div>
+        // </div>
         // <div>
         //     <h4>Small header</h4>
         // </div>
