@@ -37,7 +37,7 @@ app.post('/api/send', (req, res) => {
     res.json(req.body);
 
     console.log("\nForm handled!")
-    console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n")
+    console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n------------------------------\n")
 
     var transporter = nodemailer.createTransport({
         service : 'gmail',
@@ -77,5 +77,19 @@ app.post('/api/apply', (req, res) => {
 
 })
 
+
+app.post('/api/refer', (req, res) => {
+    // res.setHeader('Access-Control-Allow-Origin', '*');
+    var statusCode = res.statusCode;
+    // res.send("Status code: " + statusCode)
+    // res.sendStatus();
+    var name = req.body.name,
+        referer = req.body.referer,
+        phone = req.body.phone;
+
+    console.log("Form handled!")
+    console.log("Name: ", name, "\nReferer: ", referer, "\nPhone: ", phone, "\n------------------------------\n")
+
+})
 
 app.listen(port, () => console.log("Listening on port: " + port));
