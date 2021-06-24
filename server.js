@@ -27,6 +27,11 @@ app.post('/api/send', (req, res) => {
     // res.setHeader('Access-Control-Allow-Origin', '*');
     var statusCode = res.statusCode;
     // res.send("Status code: " + statusCode)
+    // res.sendStatus();
+    var name = req.body.name,
+        email = req.body.email,
+        message = req.body.message;
+        
     console.log("Form handled!")
 })
 

@@ -79,24 +79,42 @@ class Contact extends Component {
     );
   }
 
+  // handleSubmit(e){
+  //   e.preventDefault();
+  //   axios({
+  //     method: "POST",
+  //     headers: { 'Access-Control-Allow-Origin' : "*",
+  //                 'Content-Type': 'application/json'},
+  //     url:"http://66.228.35.168:4000/api/send",
+  //     data:  this.state
+  //   }).then((response)=>{
+  //     if (response.data.status === 'success') {
+  //       console.log("Success: ", response.data);
+  //       alert("Message Sent.");
+  //       this.resetForm()
+  //     } else if (response.data.status === 'fail') {
+  //       console.log("Success: ", response.data);
+  //       alert("Message failed to send.")
+  //     }
+  //   })
+  // }
   handleSubmit(e){
     e.preventDefault();
-    axios({
-      method: "POST",
-      headers: { 'Access-Control-Allow-Origin' : "*",
-                  'Content-Type': 'application/json'},
-      url:"http://66.228.35.168:4000/api/send",
-      data:  this.state
-    }).then((response)=>{
-      if (response.data.status === 'success') {
-        console.log("Success: ", response.data);
-        alert("Message Sent.");
-        this.resetForm()
-      } else if (response.data.status === 'fail') {
-        console.log("Success: ", response.data);
-        alert("Message failed to send.")
-      }
+    fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      // body: JSON.stringify(this.state)
+      body: JSON.stringify(this.state)
     })
+    .then(res => res.json())
+    .then(resp => {
+      console.log(resp);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
   }
 
   resetForm(){
