@@ -1,0 +1,13 @@
+.questions-list {
+    background-color: linear-gradient(#191846, #048ac0);
+    font-style: italic;
+    font-size: 1.7rem;
+}
+.question-tag {
+    color:#048ac0;
+    padding: 5px;
+}
+
+.answer-tag {
+    color:#e92b0c;
+}

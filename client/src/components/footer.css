@@ -54,17 +54,22 @@ body {
 @media only screen and (min-width: 29.8125rem /*477px*/) {
     .ft-main {
         justify-content: space-around;
+        position: relative;
+        align-items: center;
     }
 }
 @media only screen and (min-width: 77.5rem /*1240px*/ ) {
     .ft-main {
         justify-content: space-evenly;
+        position: relative;
+        align-items: center;
     }
 }
 
 form {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
 }
 input[type="email"] {
     border: 0;

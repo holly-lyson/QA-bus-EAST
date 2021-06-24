@@ -1,7 +1,15 @@
+.referrals-container {
+    color: white;
+    border-style: outset;
+    max-width: 500px;
+    min-width: 300px;
+    position: relative;
+    margin: auto;
+}
+
 .introduction {
     width: fit-content;
     padding: 20px;
-    border-style: outset;
     position: relative;
     margin: auto;
 
@@ -14,19 +22,19 @@
 
 }
 .money {
-    font-size: 100px;
+    font-size: 5rem;
     color:#e92b0c;
 }
 
-.form-container {
+.ref-form {
     padding: 20px;
-    width: 50%;
+    max-width: 400px;
+    min-width: 250px;
     position: relative;
     margin: auto;
 }
 
 .form-inputs {
-    width: 90%;
     position: relative;
     margin: auto;
 }
