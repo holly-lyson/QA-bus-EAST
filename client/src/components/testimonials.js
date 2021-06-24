@@ -16,45 +16,24 @@ class Testimonials extends Component {
         super(props)
     
         this.state = {
-          clients: []
+          clients: [],
+          name: '',
+          email: '',
+          message: ''
         }
       }
 
     componentDidMount(){
 
         fetch('/api/clients')
-            .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
-            .then(clients => this.setState({ clients }, () => console.log("Customers fetched: ", clients))) // #2. After that you have to keep the images in the component's state.
-        // this.callAPI()
-        // .then(res => this.setState({images: res.express}))
-        // .catch(err => console.log(err));
-        
-        
+            .then(res => res.json()) 
+            .then(clients => this.setState({ clients }, () => console.log("Customers fetched: ", clients))) 
+
     }
-    // async callAPI() {
-    // const resp = await fetch('http://66.228.35.168:4000/api/clients', {
-    //     method: 'GET',
-    //     headers: {
-    //         'Access-Control-Allow-Origin' : '*',
-    //         'Content-Type' : 'application/json'
-    //     },
-        
-    // });
-    // const body = await resp.json();
-    // if (resp.status !== 200){
-    //     throw Error(body.message)
-    // }
 
-    // return body;
-        // #1. First of all you have to fetch the images.
-    
-
-    // }
 
   render() {
-    // this.callAPI()
-    // .then(res => this.setState({images: res.express}))
-    // .catch(err => console.log(err));
+
     const { clients } = this.state
     if(!clients) return <div>Images not loaded yet!</div>
     // const imgs = images.map(({id, lastName, photoURL}) => <img src={photoURL} key={id} alt={lastName}/>)
@@ -70,19 +49,21 @@ class Testimonials extends Component {
                 <div>
                     <div className="form-container">
                         <h1> Testimonial form </h1>
+                        <form onSubmit={this.handleSubmit.bind(this)}>
                         <div className="form-inputs">
-                            <label className="form-label">Name</label>
-                            <input type="text" name="name" className="form-input" placeholder="Your Name..." />
+                            <label for="name" className="form-label">Name</label>
+                            <input type="name" id="name" name="name" className="form-input" placeholder="Your Name..." />
                         </div>
                         <div className="form-inputs">
-                            <label className="form-label">email</label>
-                            <input type="email" name="email" className="form-input" placeholder="Your email..." />
+                            <label for="email" className="form-label">email</label>
+                            <input id="email" type="email" name="name" className="form-input" placeholder="Your email..." />
                         </div>
                         <div className="form-inputs">
-                            <label className="form-label">Testimonial</label>
-                            <textarea rows="5" rows="3" name="testimonial" className="form-input" placeholder="Your testimonial text..."></textarea>
+                            <label for="message" className="form-label">Testimonial</label>
+                            <textarea id="message" type="message" rows="5" rows="3" name="testimonial" className="form-input" placeholder="Your testimonial text..."></textarea>
                         </div>
                         <input type="submit" value="Submit" />
+                        </form>
                     </div>
                 </div>
                 <div style={{paddingTop : "25pt"}}>
@@ -106,6 +87,42 @@ class Testimonials extends Component {
 
     );
   }
+
+
+  handleSubmit(e){
+    e.preventDefault();
+    fetch('/api/apply', {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      // body: JSON.stringify(this.state)
+      body: JSON.stringify(this.state)
+    })
+    .then(res => res.json())
+    .then(resp => {
+      console.log(resp);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+  }
+
+  resetForm(){
+    this.setState({name: '', email: '', message: ''})
+  }
+
+    onNameChange(event) {
+    this.setState({name: event.target.value})
+    }
+
+onEmailChange(event) {
+    this.setState({email: event.target.value})
+    }
+
+onMessageChange(event) {
+    this.setState({message: event.target.value})
+    }
 }
 // ReactDOM.render(<Testimonials />, document.querySelector('.demo-carousel'));
 
