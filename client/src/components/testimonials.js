@@ -57,8 +57,7 @@ class Testimonials extends Component {
     // .catch(err => console.log(err));
     const { images } = this.state
     if(!images) return <div>Images not loaded yet!</div>
-    
-    // const imgs = clients.map(({id, lastName, photoURL}) => <img src={photoURL} key={id} alt={lastName}/>)
+    // const imgs = images.map(({id, lastName, photoURL}) => <img src={photoURL} key={id} alt={lastName}/>)
     // const imgs2 = [clients]
 
     return(
