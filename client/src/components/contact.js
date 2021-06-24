@@ -25,7 +25,7 @@ class Contact extends Component {
                   <br/>       
               </div>
             </div>
-            <div className="column">
+            <div className="column email-form">
               <span className="fa fa-envelope "> Send an Email  </span>
               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
                 <label for="name"><br/><br/>Name</label>
@@ -45,36 +45,6 @@ class Contact extends Component {
             </div>
           </div>
       </div>
-      
-        /*<div classNameName="blk-background">
-        <div classNameName="App">
-            <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-              <div classNameName="form-group">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" classNameName="form-control" />
-                  <input type="text" classNameName="form-control" id="name" value={this.state.name} 
-                  onChange={this.onNameChange.bind(this)} />
-              </div>
-              <div classNameName="form-group">
-                  <label htmlFor="exampleInputEmail1">Email address</label>
-                  <input type="email" classNameName="form-control" aria-describedby="emailHelp" />
-                  <input type="email" classNameName="form-control" id="email" 
-                  aria-describedby="emailHelp" 
-                  value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-              </div>
-              <div classNameName="form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea classNameName="form-control" rows="5"></textarea>
-                  <textarea classNameName="form-control" rows="5" id="message" 
-                  value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-              </div>
-              <button type="submit" classNameName="btn btn-primary">Submit</button>
-            </form>
-        </div>
-
-        </div>
-
-    </div>*/
 
     );
   }
