@@ -1,5 +1,6 @@
 .referrals-container {
-    color: white;
+    /* color: white; */
+    background-image: linear-gradient(#191846, #048ac0);
     border-style: outset;
     max-width: 500px;
     min-width: 300px;

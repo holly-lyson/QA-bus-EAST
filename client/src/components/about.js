@@ -23,7 +23,7 @@ class About extends Component {
                 <br></br>
                 <br></br>
                   <h2>
-                  Call Jeremy today for a free consultation and quote today!
+                  Call Jeremy for a free consultation and quote today!
                   </h2> 
               </p>
           </div>

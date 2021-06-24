@@ -1,5 +1,6 @@
 .form-container {
-    color: white;
+    /* color: white; */
+    background-image: linear-gradient(#048ac0, #191846);
     border-style: outset;
     width: 50%;
     position: relative;
