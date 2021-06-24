@@ -32,8 +32,24 @@ app.post('/api/send', (req, res) => {
         email = req.body.email,
         message = req.body.message;
 
+    res.json(req.body);
+
     console.log("Form handled!")
     console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n")
 })
+
+app.post('/api/apply', (req, res) => {
+    // res.setHeader('Access-Control-Allow-Origin', '*');
+    var statusCode = res.statusCode;
+    // res.send("Status code: " + statusCode)
+    // res.sendStatus();
+    var name = req.body.name,
+        email = req.body.email,
+        message = req.body.message;
+
+    console.log("Form handled!")
+    console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n")
+})
+
 
 app.listen(port, () => console.log("Listening on port: " + port));
