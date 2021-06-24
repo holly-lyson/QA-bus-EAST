@@ -19,9 +19,9 @@ class MenuBar extends Component {
                 {/*<div className="manubar-container">
                     <img src={logo} className="manubar-logo" alt="logo"/>
                 </div>*/}
-                <h1> {/*className="menubar-logo"> React<i className="fab fa-react"></i>*/}
+                <a href='/'> {/*className="menubar-logo"> React<i className="fab fa-react"></i>*/}
                     <img src={logo} className="manubar-logo" alt="logo" width="70px" color="white"/>
-                </h1>
+                </a>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
