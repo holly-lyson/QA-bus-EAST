@@ -26,7 +26,7 @@ class Contact extends Component {
               </div>
             </div>
             <div className="column email-form">
-              <span className="fa fa-envelope "> Send an Email  </span>
+              <p className="fa fa-envelope "> Send an Email  </p>
               <form id="contact-form" onSubmit={this.handleSubmit.bind(this)}>
                 <label for="name"><br/><br/>Name</label>
                 <input type="text" required id="name" name="name" placeholder="Your name..."
