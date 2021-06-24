@@ -3,6 +3,16 @@ import './referrals.css';
 
 
 class Referrals extends Component {
+
+  constructor(props) { 
+    super(props);
+      this.state = {
+        name: '',
+        referer: '',
+        phone: ''
+    }
+  }
+
   render() {
     return(
         <div className="blk-background">
@@ -16,17 +26,17 @@ class Referrals extends Component {
             <div className="ref-form">
               <div className="form-inputs">
                 <label className="form-label">Your Name</label>
-                <input type="text" name="name" className="form-input" placeholder="Your Name..." />
+                <input type="text" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
               </div>
               <div className="form-inputs">
                 <label className="form-label">Name of referred person </label>
-                <input type="text" name="name" className="form-input" placeholder="Referred person's name..." />
+                <input type="text" id="referer" name="name" className="form-input" placeholder="Referred person's name..." value={this.state.referer} onChange={this.onRefererChange.bind(this)}/>
               </div>
               <div className="form-inputs">
                 <label className="form-label">Phone number of referred person</label>
-                <input type="text" name="name" className="form-input" placeholder="Phone number..." />
+                <input type="text" id="phone" name="name" className="form-input" placeholder="Phone number..." value={this.state.phone} onChange={this.onPhoneChange.bind(this)}/>
               </div>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" onSubmit={this.handleSubmit.bind(this)}/>
             </div>
             
           </div>
@@ -35,7 +45,43 @@ class Referrals extends Component {
         //     <h4>Small header</h4>
         // </div>
     );
+    
   }
-}
+
+  handleSubmit(e){
+    e.preventDefault();
+    fetch('/api/refer', {
+      method: 'POST',
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    })
+    .then(res => res.json())
+    .then(resp => {
+      console.log(resp);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+  }
+
+  resetForm(){
+    this.setState({name: '', email: '', message: ''})
+  }
+
+  onNameChange(event) {
+    this.setState({name: event.target.value})
+    }
+
+  onRefererChange(event) {
+      this.setState({referer: event.target.value})
+      }
+
+  onPhoneChange(event) {
+    this.setState({phone: event.target.value})
+    }
+
+}//END 
 
 export default Referrals;
