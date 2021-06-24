@@ -21,7 +21,7 @@ class Contact extends Component {
             <div className="column">
               <div className="contacts">
                   <p>Call Jeremy:</p>
-                  <span className="fa fa-phone "> </span>  <a href="tel:6097421457">609-742-1457</a> <br/>  
+                  <span className="fa fa-phone "> </span>  <a style={{color: "white"}}href="tel:6097421457">609-742-1457</a> <br/>  
                   <br/>       
               </div>
             </div>
