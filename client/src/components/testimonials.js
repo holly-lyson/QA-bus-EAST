@@ -31,6 +31,7 @@ class Testimonials extends Component {
     const resp = await fetch('http://66.228.35.168:4000/api/clients', {
         method: 'GET',
         headers: {
+            'Access-Control-Allow-Origin' : '*',
             'Content-Type' : 'application/json'
         },
         

@@ -14,7 +14,7 @@ app.use(Express.urlencoded({ extended: true}))
 app.use(cors)
 
 app.get('/api/clients', (req, res) => {
-    
+    res.setHeader('Access-Control-Allow-Origin', '*')
     var custs = []
 
     res.json(Clients)
