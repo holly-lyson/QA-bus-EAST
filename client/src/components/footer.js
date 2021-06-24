@@ -49,7 +49,7 @@ class Footer extends Component {
 					<ul className="ft-legal-list">
 					<li><a href="#">Terms &amp; Conditions</a></li>
 					<li><a href="#">Privacy Policy</a></li>
-					<li>&copy; 2021 Copyright Atlas Labs LLC</li>
+					<li>&copy; <a href="http://atlaslabs.world">2021 Copyright Atlas Labs LLC</a></li>
 					</ul>
 				</section>
 				</footer>
