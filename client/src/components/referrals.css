@@ -6,8 +6,7 @@
     min-width: 300px;
     position: relative;
     margin: auto;
-    margin-bottom: 15pt;
-    padding-bottom: 20pt;
+    padding-bottom: 5pt;
 }
 
 .introduction {
@@ -25,12 +24,13 @@
 
 }
 .money {
+    font-weight: 600;
     font-size: 5rem;
     color:#e92b0c;
 }
 
 .ref-form {
-    padding: 20px;
+    padding: 0px;
     max-width: 400px;
     min-width: 250px;
     position: relative;
@@ -38,10 +38,22 @@
 }
 
 .form-inputs {
-    padding-top: 15pt;
+
+    padding: 5pt;
     position: relative;
     margin: auto;
 }
+input {
+    background: #048ac0;
+    color: #fff; 
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 1px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
 @media screen and (max-width: 800px)  {
     .form-inputs {
