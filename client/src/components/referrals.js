@@ -23,10 +23,10 @@ class Referrals extends Component {
               <p style={{fontSize:'1.8rem'}}>per referral</p>
               <p>as long as the referred customer has a completed service</p>
             </div>
-            {/* <div className="ref-form"> */}
             <form onSubmit={this.handleSubmit.bind(this)}>
+            <div className="ref-form">
               <div className="form-inputs">
-            <div>
+              <div>
                 <label for="name" className="form-label">Your Name</label>
                 <input type="name" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
               </div>
@@ -40,10 +40,10 @@ class Referrals extends Component {
               </div>
               <input type="submit" value="Submit"/>
             </div>
-            </form>
             </div>
+            </form>
           </div>
-        // </div>
+        </div>
         // <div>
         //     <h4>Small header</h4>
         // </div>
