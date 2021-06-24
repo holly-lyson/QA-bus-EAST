@@ -2,7 +2,7 @@ import Express, { json } from 'express';
 import Clients from "./clients.js";
 // import Cors from 
 // import * as cors from 'cors';
-
+import cors from 'cors';
 
 const app = Express();
 const port = 4000;
@@ -12,7 +12,7 @@ app.use(Express.json())
 app.use(Express.urlencoded({ extended: true}))
 // app.use(Cors)
 
-app.get('/api/clients', (req, res) => {
+app.get('/api/clients', cors(), (req, res) => {
     
     var custs = []
 

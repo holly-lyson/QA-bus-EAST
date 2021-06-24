@@ -6,6 +6,7 @@ import {Carousel} from 'react-responsive-carousel';
 import logo from '../logo.png';
 import logo2 from '../surfLogo.png';
 import img1 from "../images/1.png"
+import cors from 'cors';
 // import clients from "./clients"
 import './testimonials.css';
 
@@ -20,14 +21,37 @@ class Testimonials extends Component {
       }
 
     componentDidMount(){
-           // #1. First of all you have to fetch the images.
-    fetch('/api/clients')
-        .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
-        .then(images => this.setState({ images }, () => console.log("Customers fetched: ", images))) // #2. After that you have to keep the images in the component's state.
+        this.callAPI()
+        .then(res => this.setState({images: res.express}))
+        .catch(err => console.log(err));
         
+        
+    }
+    async callAPI() {
+    const resp = await fetch('http://66.228.35.168:4000/api/clients', {
+        method: 'GET',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        
+    });
+    const body = await resp.json();
+    if (resp.status !== 200){
+        throw Error(body.message)
+    }
+
+    return body;
+        // #1. First of all you have to fetch the images.
+    // fetch('/api/clients')
+    // .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
+    // .then(images => this.setState({ images }, () => console.log("Customers fetched: ", images))) // #2. After that you have to keep the images in the component's state.
+
     }
 
   render() {
+    this.callAPI()
+    .then(res => this.setState({images: res.express}))
+    .catch(err => console.log(err));
     const { images } = this.state
     if(!images) return <div>Images not loaded yet!</div>
     
