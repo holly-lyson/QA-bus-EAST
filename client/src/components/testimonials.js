@@ -23,8 +23,8 @@ class Testimonials extends Component {
     componentDidMount(){
 
         fetch('/api/clients')
-    .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
-    .then(clients => this.setState({ clients }, () => console.log("Customers fetched: ", clients))) // #2. After that you have to keep the images in the component's state.
+            .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
+            .then(clients => this.setState({ clients }, () => console.log("Customers fetched: ", clients))) // #2. After that you have to keep the images in the component's state.
         // this.callAPI()
         // .then(res => this.setState({images: res.express}))
         // .catch(err => console.log(err));
