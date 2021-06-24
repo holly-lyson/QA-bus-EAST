@@ -16,7 +16,7 @@ class Testimonials extends Component {
         super(props)
     
         this.state = {
-          images: []
+          clients: []
         }
       }
 
@@ -24,7 +24,7 @@ class Testimonials extends Component {
 
         fetch('/api/clients')
     .then(res => res.json()) // If it's a JSON response, you have to parse it firstly
-    .then(images => this.setState({ images }, () => console.log("Customers fetched: ", images))) // #2. After that you have to keep the images in the component's state.
+    .then(clients => this.setState({ clients }, () => console.log("Customers fetched: ", clients))) // #2. After that you have to keep the images in the component's state.
         // this.callAPI()
         // .then(res => this.setState({images: res.express}))
         // .catch(err => console.log(err));
@@ -55,10 +55,14 @@ class Testimonials extends Component {
     // this.callAPI()
     // .then(res => this.setState({images: res.express}))
     // .catch(err => console.log(err));
-    const { images } = this.state
-    if(!images) return <div>Images not loaded yet!</div>
+    const { clients } = this.state
+    if(!clients) return <div>Images not loaded yet!</div>
     // const imgs = images.map(({id, lastName, photoURL}) => <img src={photoURL} key={id} alt={lastName}/>)
     // const imgs2 = [clients]
+    for (var i in clients){
+        var o = clients[i];
+        console.log(o.lastName);
+    }
 
     return(
         <div className="blk-background">
@@ -81,20 +85,22 @@ class Testimonials extends Component {
                         <input type="submit" value="Submit" />
                     </div>
                 </div>
-            <Carousel autoPlay={true} infiniteLoop={true} showArrows={true} >
-                <div>
-                    {
-                        images.map( image => {
-                            <div>
-                                <img src={ image.photoURL } alt="img1"/>
-                                <p className="legend">{ image.firstName }</p>
-                            </div>
-                        })
+                <div style={{paddingTop : "25pt"}}>
+                <Carousel  autoPlay={true} infiniteLoop={true} showArrows={true} >
+                    <div>
+                        {
+                            clients.map( c => {
+                                <div>
+                                    <img src={ c.photoURL } alt="img1"/>
+                                    <p className="legend">{ c.firstName }</p>
+                                </div>
+                            })
 
-                    }
-                </div>
+                        }
+                    </div>
 
-            </Carousel>
+                </Carousel>
+            </div>
             </div>
         </div>
 

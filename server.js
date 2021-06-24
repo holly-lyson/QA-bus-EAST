@@ -16,9 +16,10 @@ app.use(Express.urlencoded({ extended: true}))
 app.get('/api/clients', (req, res) => {
     // res.setHeader('Access-Control-Allow-Origin', '*')
     var custs = []
-
+    var i = 0;
     res.json(Clients)
-    console.log("Endpoint clicked!")
+    i++;
+    console.log("Clients sent " , i, " times!")
 
 })
 
