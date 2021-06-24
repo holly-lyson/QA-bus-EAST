@@ -1,29 +1,36 @@
 body {
     /* background: linear-gradient(#191846, #048ac0); */
-    background-color: whitesmoke;
-    
+    background-color: whitesmoke;  
 }
 
 * {
     box-sizing: border-box;
+    
   }
 
+  .column.email-form {
+    background: linear-gradient(#191846, #048ac0);
+    border-style: groove;
+    
+  }
   .contacts {
-    /* background-image: linear-gradient(#191846, #048ac0); */
-    position: right;
-    background: #048ac0;
-    color:#fff;
+    background: linear-gradient(#191846, #048ac0);
+    position: relative;
+    margin:auto;
+    
+    color:white;
     width:400px;
-    padding:25px 40px 10px 40px;
-    border-radius:6px;
+    padding:25px 40px 25px 40px;
+    border-radius:15px;
     font-size: 40px;
     box-shadow:10px 10px 40px -14px #000
   }
 
   .fa {
-    font-size: 50px;
+    font-size: 3rem;
+
     color:#fff;
-    background-image: linear-gradient(#048ac0, #191846);
+    /* background-image: linear-gradient(#048ac0, #191846); */
   }
   
   /* Style inputs */
@@ -44,20 +51,11 @@ body {
     opacity: 1; /* Firefox */
   }
   
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  :-ms-input-placeholder { /* Microsoft Edge, Internet Explorer 10-11 */
     color: #191846;
   }
   
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #191846;
-  }
- 
-
   label {
-    color: #fff;
-  }
-
-  .placeholder {
     color: #fff;
   }
 
@@ -76,7 +74,7 @@ body {
   /* Style the container/contact section */
   .container {
     border-radius: 5px;
-    background-color: linear-gradient(#191846, #048ac0);
+    /* background-color: linear-gradient(#191846, #048ac0); */
     padding: 10px;
   }
   

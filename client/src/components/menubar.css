@@ -45,6 +45,9 @@
     border-radius: 4px;
     transition: all 0.2s ease-out;
 }
+.nav-menu.active {
+    background-color: #048ac0;
+}
 
 .fa-bars {
     color: #fff;
