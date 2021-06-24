@@ -52,15 +52,15 @@ class Testimonials extends Component {
                         <form onSubmit={this.handleSubmit.bind(this)}>
                         <div className="form-inputs">
                             <label for="name" className="form-label">Name</label>
-                            <input type="name" id="name" name="name" className="form-input" placeholder="Your Name..." />
+                            <input type="name" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
                         </div>
                         <div className="form-inputs">
                             <label for="email" className="form-label">email</label>
-                            <input id="email" type="email" name="name" className="form-input" placeholder="Your email..." />
+                            <input id="email" type="email" name="name" className="form-input" placeholder="Your email..." value={this.state.referer} onChange={this.onRefererChange.bind(this)}/>
                         </div>
                         <div className="form-inputs">
                             <label for="message" className="form-label">Testimonial</label>
-                            <textarea id="message" type="message" rows="5" rows="3" name="testimonial" className="form-input" placeholder="Your testimonial text..."></textarea>
+                            <textarea id="message" type="message" rows="5" rows="3" name="testimonial" className="form-input" placeholder="Your testimonial text..." value={this.state.phone} onChange={this.onPhoneChange.bind(this)}></textarea>
                         </div>
                         <input type="submit" value="Submit" />
                         </form>
