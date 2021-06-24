@@ -11,10 +11,10 @@ const port = 4000;
 app.use(Express.json())
 app.use(Express.urlencoded({ extended: true}))
 // app.use(Cors)
-app.use(cors)
+// app.use(cors);
 
 app.get('/api/clients', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
+    // res.setHeader('Access-Control-Allow-Origin', '*')
     var custs = []
 
     res.json(Clients)
@@ -24,7 +24,7 @@ app.get('/api/clients', (req, res) => {
 
 
 app.get('/api/send', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    // res.setHeader('Access-Control-Allow-Origin', '*');
     var statusCode = res.statusCode;
     // res.send("Status code: " + statusCode)
 
