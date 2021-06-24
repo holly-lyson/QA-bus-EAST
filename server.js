@@ -11,8 +11,9 @@ const port = 4000;
 app.use(Express.json())
 app.use(Express.urlencoded({ extended: true}))
 // app.use(Cors)
+app.use(cors)
 
-app.get('/api/clients', cors(), (req, res) => {
+app.get('/api/clients', (req, res) => {
     
     var custs = []
 
