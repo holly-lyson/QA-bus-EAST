@@ -25,15 +25,15 @@ class Referrals extends Component {
             </div>
             <div className="ref-form">
               <div className="form-inputs">
-                <label className="form-label">Your Name</label>
+                <label for="name" className="form-label">Your Name</label>
                 <input type="text" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
               </div>
               <div className="form-inputs">
-                <label className="form-label">Name of referred person </label>
+                <label for="email" className="form-label">Name of referred person </label>
                 <input type="text" id="referer" name="name" className="form-input" placeholder="Referred person's name..." value={this.state.referer} onChange={this.onRefererChange.bind(this)}/>
               </div>
               <div className="form-inputs">
-                <label className="form-label">Phone number of referred person</label>
+                <label for="message "className="form-label">Phone number of referred person</label>
                 <input type="text" id="phone" name="name" className="form-input" placeholder="Phone number..." value={this.state.phone} onChange={this.onPhoneChange.bind(this)}/>
               </div>
               <input type="submit" value="Submit" onSubmit={this.handleSubmit.bind(this)}/>
