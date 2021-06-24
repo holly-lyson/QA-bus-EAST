@@ -29,8 +29,8 @@ class Footer extends Component {
 					<h2 className="ft-title"><a href="/contact">Contact</a></h2>
 					<ul>
 						<li><a>Jeremy Lyson</a></li>
-						<li><a>609-742-1457</a></li>
-						<li><a>jeremylyson@surfandturfroofing.com</a></li>
+						<li><a href="tel:6097421457">609-742-1457</a></li>
+						<li><a href="mailto:jeremylyson@surfandturfroofing.com" >jeremylyson@surfandturfroofing.com</a></li>
 					</ul>
 					</div>
 					
@@ -39,12 +39,8 @@ class Footer extends Component {
 				{/* <!-- Footer social --> */}
 				<section className="ft-social">
 					<ul className="ft-social-list">
-					<li><a href="#"><i className="fab fa-facebook"></i></a></li>
-					<li><a href="#"><i className="fab fa-twitter"></i></a></li>
-					<li><a href="#"><i className="fab fa-instagram"></i></a></li>
-					<li><a href="#"><i className="fab fa-github"></i></a></li>
-					<li><a href="#"><i className="fab fa-linkedin"></i></a></li>
-					<li><a href="#"><i className="fab fa-youtube"></i></a></li>
+					<li><a href="https://github.com/holly-lyson/QA-bus-EAST"><i className="fab fa-github"></i></a></li>
+					<li><a href="https://linkedin.com/in/hollyzurenda"><i className="fab fa-linkedin"></i></a></li>
 					</ul>
 				</section>
 				
