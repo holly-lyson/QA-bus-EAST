@@ -6,6 +6,8 @@
     min-width: 300px;
     position: relative;
     margin: auto;
+    margin-bottom: 15pt;
+    padding-bottom: 20pt;
 }
 
 .introduction {
