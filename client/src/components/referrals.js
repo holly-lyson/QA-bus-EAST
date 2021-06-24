@@ -25,8 +25,8 @@ class Referrals extends Component {
             </div>
             <form onSubmit={this.handleSubmit.bind(this)}>
             <div className="ref-form">
-              <div className="form-inputs">
               <div>
+              <div className="form-inputs">
                 <label for="name" className="form-label">Your Name</label>
                 <input type="name" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
               </div>
