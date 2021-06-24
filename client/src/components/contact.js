@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios, {AxiosInstance} from 'axios';
 import './contact.css';
+import logo2 from '../surfLogo.png'
 
 
 class Contact extends Component {
@@ -21,7 +22,8 @@ class Contact extends Component {
             <div className="column">
               <div className="contacts">
                   <p>Call Jeremy:</p>
-                  <span className="fa fa-phone "> </span>  <a style={{color: "white"}}href="tel:6097421457">609-742-1457</a> <br/>  
+                  <span className="fa fa-phone "> </span>  <a style={{color: "whitesmoke"}}href="tel:6097421457">609-742-1457</a> <br/>  
+                  <img style={{marginBottom: "0pt", marginTop: "0pt"}}src={logo2} className="App-logo2" alt="logo2" width="150px" height="auto" />
                   <br/>       
               </div>
             </div>
