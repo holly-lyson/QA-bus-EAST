@@ -36,7 +36,7 @@ app.post('/api/send', (req, res) => {
 
     res.json(req.body);
 
-    console.log("\nForm handled!")
+    console.log("\Contact form handled!")
     console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n------------------------------\n")
 
     var transporter = nodemailer.createTransport({
@@ -72,7 +72,9 @@ app.post('/api/apply', (req, res) => {
         email = req.body.email,
         message = req.body.message;
 
-    console.log("Form handled!")
+    res.json(req.body);
+
+    console.log("Testimonial form handled!")
     console.log("Name: ", name, "\nEmail: ", email, "\nMessage: ", message, "\n------------------------------\n")
 
 })
@@ -86,8 +88,10 @@ app.post('/api/refer', (req, res) => {
     var name = req.body.name,
         referer = req.body.referer,
         phone = req.body.phone;
+    
+    res.json(req.body);
 
-    console.log("Form handled!")
+    console.log("Referral form handled!")
     console.log("Name: ", name, "\nReferer: ", referer, "\nPhone: ", phone, "\n------------------------------\n")
 
 })
