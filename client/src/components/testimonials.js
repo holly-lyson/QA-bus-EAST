@@ -51,20 +51,20 @@ class Testimonials extends Component {
                         <h1> Testimonial form </h1>
                         <form onSubmit={this.handleSubmit.bind(this)}>
                         <div className="form-inputs">
-                        <div>
-                            <label for="name" className="form-label">Name</label>
-                            <input type="text" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
+                            <div>
+                                <label for="name" className="form-label">Name</label>
+                                <input type="text" id="name" name="name" className="form-input" placeholder="Your Name..." value={this.state.name} onChange={this.onNameChange.bind(this)}/>
+                            </div>
+                            <div className="form-inputs">
+                                <label for="email" className="form-label">email</label>
+                                <input id="email" type="email" name="email" className="form-input" placeholder="Your email..." value={this.state.email} onChange={this.onEmailChange.bind(this)}/>
+                            </div>
+                            <div className="form-inputs">
+                                <label for="message" className="form-label">Testimonial</label>
+                                <textarea id="message" type="message" rows="5" rows="3" name="message" className="form-input" placeholder="Your testimonial text..." value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
+                            </div>
+                            <input type="submit" value="Submit" />
                         </div>
-                        <div className="form-inputs">
-                            <label for="email" className="form-label">email</label>
-                            <input id="email" type="email" name="email" className="form-input" placeholder="Your email..." value={this.state.email} onChange={this.onEmailChange.bind(this)}/>
-                        </div>
-                        <div className="form-inputs">
-                            <label for="message" className="form-label">Testimonial</label>
-                            <textarea id="message" type="message" rows="5" rows="3" name="message" className="form-input" placeholder="Your testimonial text..." value={this.state.message} onChange={this.onMessageChange.bind(this)}></textarea>
-                        </div>
-                        <input type="submit" value="Submit" />
-                    </div>
                         </form>
                     </div>
                 </div>
